@@ -1,0 +1,20 @@
+#!/bin/bash
+# Environment Setup:
+mkdir brainchip
+cd brainchip
+wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-aarch64.sh
+chmod +x Miniforge3-Linux-aarch64.sh
+yes | ./Miniforge-Linux-aarch64.sh
+conda create --name akida_env python=3.11
+conda activate akida_env
+pyenv install 3.11.13
+pyenv global 3.11.13
+python -m pip install --upgrade pip
+pip install tensorflow==2.15  --break-system-packages
+pip install opencv-python==4.11.0.86  --break-system-packages
+pip install akida==2.15.0  --break-system-packages
+pip install cnn2snn==2.15.0  --break-system-packages
+pip install akida-models==1.9.0  --break-system-packages
+
+
+
