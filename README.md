@@ -1,2 +1,2 @@
-# RaytheonComp
+# RComp
 Drone software repo
